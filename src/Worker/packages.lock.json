@@ -42,6 +42,12 @@
           "Microsoft.Extensions.Options": "8.0.0"
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+        "type": "Direct",
+        "requested": "[1.19.6, )",
+        "resolved": "1.19.6",
+        "contentHash": "7GOQdMzQcH7o/bPFL/I2kQEgMnq2pYZ+exhGb9nNqs624K9w2jB2zieh4sOH9+a01i/G9iTWfeUI3IGMF7SKNg=="
+      },
       "Azure.Core": {
         "type": "Transitive",
         "resolved": "1.35.0",

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  demo.api:
+    image: ${DOCKER_REGISTRY-}demoapi
+    build:
+      context: .
+      dockerfile: src/Api/Dockerfile
+
+  demo.worker:
+    image: ${DOCKER_REGISTRY-}demoworker
+    build:
+      context: .
+      dockerfile: src/Worker/Dockerfile
+
