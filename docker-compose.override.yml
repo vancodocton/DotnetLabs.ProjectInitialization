@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  sqlserver:
+    ports:
+      - "1434:1433"
   demo.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
