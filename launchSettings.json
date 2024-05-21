@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "demo.api": "StartDebugging",
-        "demo.worker": "StartDebugging"
+        "demo.worker": "StartDebugging",
+        "demo.nativeaotapi": "StartDebugging"
       }
     }
   }

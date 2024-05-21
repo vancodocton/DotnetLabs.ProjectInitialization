@@ -21,5 +21,12 @@ services:
       context: .
       dockerfile: src/Worker/Dockerfile
 
+  demo.nativeaotapi:
+    image: ${DOCKER_REGISTRY-}demonativeaotapi
+    build:
+      context: .
+      dockerfile: src/NativeAotApi/Dockerfile
+
 volumes:
   mssql22:
+
