@@ -1,0 +1,26 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+    - name: Restore dependencies
+      run: |
+        dotnet restore Demo.sln --locked-mode
+        dotnet tool restore
+    - name: Build
+      run: dotnet build Demo.sln --no-restore -c Release
+    - name: Test
+      run: dotnet test Demo.sln --no-build -c Release --verbosity normal
